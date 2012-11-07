@@ -1,0 +1,28 @@
+<resources>
+      
+    <!-- *********** customized theme ************** -->
+
+	<!-- **************************************************** -->
+    
+
+</resources>
+
+    <!--  
+    <style name="AppThemeOrig" parent="android:Theme.Light" />
+    -->
+    
+<!-- 
+    <style name="SpinnerItem" parent="@android:style/Widget.TextView.SpinnerItem">
+        <item name="android:textColor">#ffffff</item>
+    </style>
+    <style name="SyhSpinnerItemStyle" parent="@android:TextAppearance.Widget.TextView.SpinnerItem">
+    	<item name="android:textColor">#ffffff</item>
+  	</style>
+    <style name="AppTheme" parent="android:Theme.Black">
+        <item name="android:spinnerItemStyle">@style/SpinnerItem</item>
+    </style>
+
+	<style name="SpinnerItem.DropDownItem" parent="@android:style/Widget.DropDownItem.Spinner">
+        <item name="android:textColor">#FF0000</item>
+    </style>
+ -->

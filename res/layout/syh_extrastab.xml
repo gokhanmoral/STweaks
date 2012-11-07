@@ -1,0 +1,94 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        	  xmlns:tools="http://schemas.android.com/tools"
+    		  android:id="@+id/SyhExtrasTabLayout"
+              android:layout_width="fill_parent" 
+              android:layout_height="fill_parent" 
+              android:orientation="vertical"
+              android:gravity="center"
+              android:paddingTop="0dip" >
+              
+        <TextView
+        android:id="@+id/textViewDevInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/developer_info"
+        android:textColor="#FFFFFF"
+        android:textStyle="italic"
+        android:background="#AA000000"
+        android:paddingTop="10dip"
+        android:paddingBottom="10dip" />
+
+          <TextView
+        android:id="@+id/textViewAppVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textStyle="italic"
+        android:background="#AA000000"
+        android:paddingTop="5dip"
+        android:paddingBottom="5dip" />
+                
+       	<Button 
+        android:id="@+id/ResetSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:typeface="serif"
+        android:textColor="#ffffffff"
+        android:text="@string/reset_settings"
+        />   
+              
+       	<Button 
+        android:id="@+id/CheckForUpdates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:typeface="serif"
+        android:textColor="#ffffffff"
+        android:text="@string/check_for_updates"
+        />   
+        
+       	<Button 
+        android:id="@+id/FlashKernel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:typeface="serif"
+        android:textColor="#ffffffff"
+        android:text="@string/flash_kernel"/>  
+              
+        <TextView
+        android:id="@+id/textViewDonate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/donation_invite"
+        android:textColor="#FFFFFF"
+        android:background="#AA000000"
+        android:paddingTop="10dip"
+        android:paddingBottom="10dip" />
+   	
+        <ImageButton
+        android:id="@+id/imageButtonPayPal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:src="@drawable/android_button_paypal" />
+        
+        <TextView
+        android:id="@+id/textViewKernelVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:background="#AA000000"
+        android:paddingTop="0dip"
+        android:paddingBottom="20dip" />
+                      	
+</LinearLayout>
+
+ <!--        
+       	<Button 
+        android:id="@+id/PayPalButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:typeface="serif"
+        android:textColor="#ffffffff"
+        android:text="@string/paypal"/>
+  -->   

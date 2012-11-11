@@ -1,4 +1,4 @@
-package com.gokhanmoral.STweaks;
+package com.gokhanmoral.stweaks.app;
 
 import android.app.Activity;
 import android.graphics.Color;

@@ -1,4 +1,4 @@
-package com.gokhanmoral.STweaks;
+package com.gokhanmoral.stweaks.app;
 
 import android.app.Activity;
 import android.content.Context;
@@ -44,21 +44,29 @@ public abstract class SyhControl {
 	public String setValueViaScript() 
 	{ 
 		String command = syh_command + action + " " + valueFromUser;
-		String response = Utils.executeRootCommandInThread3(command);
+		String response = Utils.executeRootCommandInThread(command);
 		if(response == null) response = "";
 		valueFromScript = valueFromUser;
 		return response;		
 	}
 	
 	// get the value from kernel script - user interface NOT CHANGED! 
-	public boolean getValueViaScript() 
+	public boolean getValueViaScript(boolean optimized) 
 	{
 		boolean isOk = false;
 		
 		if (this.canGetValueFromScript)
 		{
-			String command = syh_command + action;
-			String response = Utils.executeRootCommandInThread3(command);
+			String command;
+			if(optimized)
+			{
+				command = "`echo " + action + "|awk '{print \". /res/customconfig/actions/\" $1,$1,$2,$3,$4,$5,$6,$7,$8}'`";
+			}
+			else
+			{
+				command = syh_command + action;
+			}
+			String response = Utils.executeRootCommandInThread(command);
 			if(response != null)
 			{
 				if (!response.isEmpty())

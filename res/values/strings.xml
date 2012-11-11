@@ -3,8 +3,8 @@
     <string name="app_name">STweaks</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_main">STweaks</string>
-    <string name="bottom_accept">Apply Changes</string>
-    <string name="bottom_decline">Clear Changes</string>
+    <string name="bottom_accept">Apply</string>
+    <string name="bottom_decline">Discard</string>
     <string name="startmenu_initial">Unexpected error!</string>
     <string name="startmenu_nokernelsupport">Sorry, no kernel support!</string>
     <string name="donation_invite">Please donate to support!</string>

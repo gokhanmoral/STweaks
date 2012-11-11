@@ -1,7 +1,9 @@
-package com.gokhanmoral.STweaks;
+package com.gokhanmoral.stweaks.app;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.gokhanmoral.stweaks.app.R;
 
 import android.app.Activity;
 import android.content.Context;

@@ -1,4 +1,4 @@
-package com.gokhanmoral.STweaks;
+package com.gokhanmoral.stweaks.app;
 
 public interface SyhValueChangedInterface {
 	void valueChanged();

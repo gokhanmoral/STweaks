@@ -1,4 +1,6 @@
-package com.gokhanmoral.STweaks;
+package com.gokhanmoral.stweaks.app;
+
+import com.gokhanmoral.stweaks.app.R;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -84,7 +86,7 @@ public class SyhExtrasTab extends SyhTab implements OnClickListener {
         	       .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
         	           public void onClick(DialogInterface dialog, int id) {
         	               // Handle Ok
-        	           		Utils.executeRootCommandInThread3("/res/uci.sh delete default");
+        	           		Utils.executeRootCommandInThread("/res/uci.sh delete default");
         	           		System.exit(0);
         	           }
         	       })

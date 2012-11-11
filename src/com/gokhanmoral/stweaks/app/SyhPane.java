@@ -1,4 +1,4 @@
-package com.gokhanmoral.STweaks;
+package com.gokhanmoral.stweaks.app;
 
 import java.util.ArrayList;
 import java.util.List;

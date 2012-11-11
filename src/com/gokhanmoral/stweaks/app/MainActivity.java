@@ -1,4 +1,4 @@
-package com.gokhanmoral.STweaks;
+package com.gokhanmoral.stweaks.app;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
+
+import com.gokhanmoral.stweaks.app.R;
 
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
@@ -84,7 +86,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 		Log.i(LOG_TAG, "Siyah script found.");
 		Log.i(LOG_TAG, "Getting config xml via script...");
 		Boolean isOk = false;
-		String response = Utils.executeRootCommandInThread3("/res/uci.sh config");
+		String response = Utils.executeRootCommandInThread("/res/uci.sh config");
 		if (response != null && !response.equals(""))
 		{
 			Log.i(LOG_TAG, "Config xml extracted from script!");				
@@ -283,19 +285,25 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
     	
 	private void getScriptValuesWithoutUiChange() 
 	{
+		String exitInActions = Utils.executeRootCommandInThread("grep exit /res/customconfig/actions/*");
+		boolean optimized = false;
+		if(exitInActions == null || exitInActions.length() == 0)
+        {
+			Utils.executeRootCommandInThread("source /res/customconfig/customconfig-helper");
+	        Utils.executeRootCommandInThread("read_defaults");
+	        Utils.executeRootCommandInThread("read_config");
+	        optimized = true;
+        }
        	for (int i = 0; i < syhTabList.size(); i++)
     	{
    	   		SyhTab tab = syhTabList.get(i);
-	        Utils.executeRootCommandInThread3("source /res/customconfig/customconfig-helper");
-	        Utils.executeRootCommandInThread3("read_defaults");
-	        Utils.executeRootCommandInThread3("read_config");
    	   		for  (int j = 0; j < tab.panes.size(); j++)
 	        {
 	        	SyhPane pane = tab.panes.get(j);
 	        	for  (int k = 0; k < pane.controls.size(); k++)
 	        	{
 	        		SyhControl control = pane.controls.get(k);	        		
-	        		control.getValueViaScript();
+	        		control.getValueViaScript(optimized);
 	        	}
 	        }
     	}			

@@ -1,4 +1,4 @@
-package com.gokhanmoral.STweaks;
+package com.gokhanmoral.stweaks.app;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -121,7 +121,7 @@ public class Utils {
 		return isOk;
 	}
 
-	public static String executeRootCommandInThread3(String command) {
+	public static String executeRootCommandInThread(String command) {
 		Log.i(LOG_TAG, "[Running command:" + command + "]");
 
 		String consoleOutStr = "";

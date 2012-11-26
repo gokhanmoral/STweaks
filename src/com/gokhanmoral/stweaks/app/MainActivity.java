@@ -557,7 +557,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
            		LinearLayout tabContentLayout = new LinearLayout(getActivity());
            		tabContentLayout.setBackgroundColor(Color.BLACK);
            		tabContentLayout.setOrientation(LinearLayout.VERTICAL);
-           		tabContentLayout.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
+           		tabContentLayout.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
 
            		for  (int j = 0; j < tab.panes.size(); j++)
 		        {
@@ -608,15 +608,15 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
           * delivers it the parameters given to AsyncTask.execute() */
         protected Boolean doInBackground(Void... params) 
         {
-        	if(kernelSupportOk)
-        	{
-        		userInterfaceConfigSuccess =  getUserInterfaceConfigFromScript();        	
-        	}
-        	else if (testingWithNoKernelSupport)
+        	if (testingWithNoKernelSupport)
         	{
         		userInterfaceConfigSuccess = getUserInterfaceConfigFromAssets(); 
         		Log.e(LOG_TAG, "NumOfTabs:" + syhTabList.size());
         	}  
+        	else if(kernelSupportOk)
+        	{
+        		userInterfaceConfigSuccess =  getUserInterfaceConfigFromScript();        	
+        	}
 
         	if (userInterfaceConfigSuccess)
         	{

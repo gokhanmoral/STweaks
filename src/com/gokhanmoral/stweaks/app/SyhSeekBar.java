@@ -111,7 +111,15 @@ public final class SyhSeekBar extends SyhControl implements OnSeekBarChangeListe
 	protected void applyScriptValueToUserInterface() {
 		if (seekbar != null)
 		{
-			Integer valueHardwareInt = Integer.parseInt(valueFromScript);
+			Integer valueHardwareInt = 0;
+			try
+			{
+				valueHardwareInt =Integer.parseInt(valueFromScript);
+			}
+			catch (NumberFormatException nfe)
+			{
+				
+			}
 			Integer progress = (valueHardwareInt - min) / step;
 			seekbar.setProgress(progress);
 		}

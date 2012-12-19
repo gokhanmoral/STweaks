@@ -7,13 +7,11 @@
     <string name="bottom_decline">Discard</string>
     <string name="startmenu_initial">Unexpected error!</string>
     <string name="startmenu_nokernelsupport">Sorry, no kernel support!</string>
-    <string name="donation_invite">Please donate to support!</string>
     <string name="check_for_updates">Check For Updates</string>
     <string name="flash_kernel">Flash Kernel</string>
-    <string name="paypal">PayPal</string>
     <string name="coming_soon">Coming soon!</string>
     <string name="reset_settings">Reset settings to default</string>
-    <string name="developer_info">Developed by Gokhan Moral.</string>
+    <string name="developer_info">Developed by Gokhan Moral</string>
     <string name="startmenu_no_root">No root access, or timeout!</string>
     
 </resources>

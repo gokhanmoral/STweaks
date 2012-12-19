@@ -6,15 +6,12 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.pm.PackageManager.NameNotFoundException;
-import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -41,12 +38,8 @@ public class SyhExtrasTab extends SyhTab implements OnClickListener {
  		 }
  		 
  		 
-     	 final Button button = (Button) v.findViewById(R.id.CheckForUpdates);
- 		 button.setOnClickListener(this);
  		 final Button button2 = (Button) v.findViewById(R.id.FlashKernel);
  		 button2.setOnClickListener(this);
- 		 final ImageButton button3 = (ImageButton) v.findViewById(R.id.imageButtonPayPal);
- 		 button3.setOnClickListener(this);
      	 final Button button4 = (Button) v.findViewById(R.id.ResetSettings);
  		 button4.setOnClickListener(this);
   		 
@@ -72,14 +65,10 @@ public class SyhExtrasTab extends SyhTab implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		switch(v.getId()) {
-        case R.id.CheckForUpdates:
         case R.id.FlashKernel:
            	Toast toast1 = Toast.makeText(mContext, R.string.coming_soon, Toast.LENGTH_LONG);
         	toast1.show();  
             break;
-        case R.id.imageButtonPayPal:
-        	mContext.startActivity(new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N4VU6J7ASUS3G")));
-        	break;
         case R.id.ResetSettings:
         	AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
         	builder.setMessage("All settings will be reset. You will have to relaunch the application.")
